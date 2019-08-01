@@ -1,0 +1,12 @@
+CSS — Namespaces
+
+l-: layouts(布局) positioning of block/element.
+o-: objects(对象)  the smallest building blocks. 
+c-: components(组件) components are larger building blocks if objects are the smallest build blocks
+js-: JavaScript hooks(js的钩子)
+is-|has-: state(状态类)
+t-: theme(主题)
+s-: scope(范围) set up a brand new styling context for a particular section of your UI. 
+u-: 实用类(utility classes)
+_: Hack Namespaces, temporary (do not bind onto this).
+qa-: for QA team.
