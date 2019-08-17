@@ -1,0 +1,9 @@
+
+the difference between folder libs and utils
+
+libs/ is where libs (like actual well done libraries) live  --senvin: get from online
+utils/ is where utility bits and pieces live                --senvin: create by myself
+
+basically libs is a more polished thing. lib is where i'd have a local copy of some package or i've cloned a library from the internet. and utils is a more of a freeform bucket where various cross-concern bits and pieces go, they don't have to be actual libs.
+
+although i'm kind of agree that we have the model and controller stuff in there that are technically more libs than utils, but i was hoping to move those into a shared npm package at some point and leave utils for the app specific nuts and bolts.
