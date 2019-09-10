@@ -1,0 +1,39 @@
+"Wrapper" vs "Container"
+
+I believe there is a difference between wrapper and container elements.
+
+In programming languages, the word container is generally used for structures that can contain more than one element. 
+A wrapper, on the other hand, is something that wraps around a single object to provide more functionality and interface to it.
+
+So, in my opinion, it makes sense to have two different names because they intend different functions.
+
+Speaking of the wrapper, it's common to think of a <div> that contains all the rest of the HTML of the document. 
+I'm sure many of us have lived through a time where we set that to 960px in width and center aligned all our main content. 
+Wrappers are also used for things like applying a sticky footer.
+
+The container, on the other hand, usually intends another kind of containment. 
+One that sometimes necessary to implement a behavior or styling of multiple components. 
+It serves the purpose of grouping elements both semantically and visually. 
+As an example, Bootstrap has "container classes" that house their grid system or contain various other components.
+
+The terms wrapper and container can also mean the same thing depending on the developer and what they intend. 
+There might be other conventions too, so the best advice is usually to implement whatever makes the most sense to you. 
+But remember, naming is one of the most fundamental and important parts of developer activities. 
+Naming conventions make our code more readable and predictable. Choose carefully!
+
+Here's an example of a general page wrapper:
+
+/**
+ * 1. Centers the content. Yes, it's a bit opinionated.
+ * 2. See the "width vs max-width" section
+ * 3. See the "Additional Padding" section
+ */
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 960px; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}
