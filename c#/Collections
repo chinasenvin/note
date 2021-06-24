@@ -1,13 +1,59 @@
-四个集合:
-1.数组:
-特点
-0数组只能放数据类型完全一致的数据
-数组定长,长度确定之后不可以再修改(缺点)
-@数组存取速度非常快
-四个集合都是类封装了一些操作使用起来更方便
-2.动态集合(ArrayList)
-特点:
-长度可以自动进行变化,长度随着存取数据自动调整
-③动态存放的是任意类型的数据
-操作:
-声明新增删除取查找遍历
+数组:
+    特点
+        数组只能放数据类型完全一致的数据
+        数组定长,长度确定之后不可以再修改(缺点)
+        数组存取速度非常快
+
+四个集合都是类，封装了一些操作，使用起来更方便
+
+1.动态集合(ArrayList)
+    特点:
+        长度可以自动进行变化,长度随着存取数据自动调整
+        动态存放的是任意类型的数据
+    操作: 
+	    声明 新增 删除 取 查找 遍历
+	
+	    声明:
+		    ArrayList list=new ArrayList();
+		新增:
+		    list.add(objectobj);//自动装箱操作-->object
+		取数据:
+            list[下标] //强制转换 拆箱-->对应的类型
+		删除:   
+        list.RemoveAt(下标); //根据下标删除
+			  list.Remove(对象);   //根据对象删除
+            删除后下标重新由0开始排序
+			  list.clear();        //清除所有的
+		查找
+			list.contains(对象); //返回是否包含某个指定的对象
+		遍历:
+		    	for (inti = 0; i < list.Count; i++)
+				{
+					if (list[i] is SE)
+					Console. WriteLine(((SE)list[i]).Show();
+					if (list[i] is PM)
+					Console. WriteLine(((PM)list[i]).Show(O);
+				}
+	
+				foreach (var item in list)
+				{
+					if(item is SE)
+						Console. WriteLine(((SE)item).Show());
+					if (item is PM)
+						Console. WriteLine((PM)item).Show());
+				}
+	
+				foreach (var item in list)
+				{
+					if(item is SE)
+						Console. WriteLine( (item as SE).Show();
+					if (item is PM)
+						Console. WriteLine(((PM)item).Show();
+				}
+            
+            is语法:
+                A is B 判断A是否是属于B这种数据类型 返回true false
+            as语法: //作为
+                A as B 把A强转成B 等价于 (B)A
+                A as B 转换失败 返回null
+                (B)A   转换失败 抛一个异常
