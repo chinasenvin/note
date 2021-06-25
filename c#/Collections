@@ -137,7 +137,7 @@ HashTable: 动态可变 装箱拆箱 键值对两排结构
 限制数据类型 泛型集合
 
 3.  List<T>
-    泛型: T type类型 定义List类没有指明T类型 在声明的时候确定T类型
+    泛型:T type类型 定义List类没有指明T类型 在声明的时候确定T类型
     特点:限制了数据类型的ArrayList
     操作:
         声明
@@ -223,3 +223,9 @@ List                Dictionary       限制了数据类型
         BindingSource bs = new BindingSource();
         bs.Datasource s dir.Values
         dataGridview.DataSource = bs;
+
+
+				
+                
+                
+                
