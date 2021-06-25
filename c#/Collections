@@ -6,7 +6,7 @@
 
 四个集合都是类，封装了一些操作，使用起来更方便
 
-1.动态集合(ArrayList)
+1.  动态集合(ArrayList)
     特点:
         长度可以自动进行变化,长度随着存取数据自动调整
         动态存放的是任意类型的数据
@@ -57,3 +57,49 @@
                 A as B 把A强转成B 等价于 (B)A
                 A as B 转换失败 返回null
                 (B)A   转换失败 抛一个异常
+				
+2.  哈希表(HashTable)
+    特点:
+        两排结构 键值对结构构成一个key(键) 对应一个value(值)
+        键值对一一对应
+    操作:
+        声明:
+            HashTable hash = new HashTable();
+        赋值:
+            hash.Add(key, value);
+            注意: key不能重复(抛异常) 装箱操作
+        取数据:
+            hash[key]  进行拆箱操作
+        删除数据
+            hash.Remove (key);
+            hash.Clear();
+        查找
+            hash.ContainsKey(键查找)
+            hash.containsvalue(值查找)	
+        遍历
+            只遍历键
+                foreach (var item in hash.Keys){}
+                foreach (var item in hash. Keys)
+				{
+                    Console. Writeline(item);
+				}
+            只遍历值
+                foreach (var item in hash.Values){}
+                foreach (var item in hash. Values)
+				{
+                    if (item is PM)
+                        Console. WriteLine ((item as PM).Show();
+                    if (item is SE)
+                        Console. WriteLine((item as SE).Show(O);
+                }
+            遍历值+键
+                foreach (DictionaryEntry item in hash)
+                {
+                    item.Key 键
+                    item. Value值
+                }
+                foreach (DictionaryEntry item in hash)
+                {
+                    Console. Writeline(item.Key);
+                    Console. Writeline( (item. Value_as _SE).Show());
+                }
