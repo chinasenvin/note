@@ -19,37 +19,37 @@
 		    list.add(objectobj);//自动装箱操作-->object
 		取数据:
             list[下标] //强制转换 拆箱-->对应的类型
-		删除:   
+        删除:   
         list.RemoveAt(下标); //根据下标删除
-			  list.Remove(对象);   //根据对象删除
+            list.Remove(对象);   //根据对象删除
             删除后下标重新由0开始排序
-			  list.clear();        //清除所有的
-		查找
-			list.contains(对象); //返回是否包含某个指定的对象
-		遍历:
-		    	for (inti = 0; i < list.Count; i++)
-				{
-					if (list[i] is SE)
-					Console. WriteLine(((SE)list[i]).Show();
-					if (list[i] is PM)
-					Console. WriteLine(((PM)list[i]).Show(O);
-				}
-	
-				foreach (var item in list)
-				{
-					if(item is SE)
-						Console. WriteLine(((SE)item).Show());
-					if (item is PM)
-						Console. WriteLine((PM)item).Show());
-				}
-	
-				foreach (var item in list)
-				{
-					if(item is SE)
-						Console. WriteLine( (item as SE).Show();
-					if (item is PM)
-						Console. WriteLine(((PM)item).Show();
-				}
+                list.clear();        //清除所有的
+        查找
+            list.contains(对象); //返回是否包含某个指定的对象
+        遍历:
+                for (inti = 0; i < list.Count; i++)
+                {
+                    if (list[i] is SE)
+                    Console. WriteLine(((SE)list[i]).Show();
+                    if (list[i] is PM)
+                    Console. WriteLine(((PM)list[i]).Show(O);
+                    }
+
+                foreach (var item in list)
+                {
+                    if(item is SE)
+                        Console. WriteLine(((SE)item).Show());
+                    if (item is PM)
+                        Console. WriteLine((PM)item).Show());
+                    }
+
+                foreach (var item in list)
+                {
+                    if(item is SE)
+                        Console. WriteLine( (item as SE).Show();
+                    if (item is PM)
+                        Console. WriteLine(((PM)item).Show();
+                }
             
             is语法:
                 A is B 判断A是否是属于B这种数据类型 返回true false
