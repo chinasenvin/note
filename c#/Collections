@@ -131,8 +131,8 @@ public class SE {
                     Console.Writeline( (item.Value_as _SE).Show());
                 }
 				
-ArrayList: 动态数组 装箱拆箱类似数组单排结构
-HashTable: 动态可变装箱拆箱键值对两排结构
+ArrayList: 动态数组 装箱拆箱 类似数组单排结构
+HashTable: 动态可变 装箱拆箱 键值对两排结构
 
 限制数据类型 泛型集合
 
