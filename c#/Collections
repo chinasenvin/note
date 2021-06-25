@@ -135,25 +135,25 @@ ArrayList: 动态数组 装箱拆箱 类似数组单排结构
 HashTable: 动态可变 装箱拆箱 键值对两排结构
 
 
-3.  泛型集合(GenericList<T>)
+3.  泛型集合(List<T>)
         泛型:T type类型 定义List类没有指明T类型 在声明的时候确定T类型
     特点:
         限制了数据类型的ArrayList
     操作:
         声明
-            GenericList<类型> 集合名称 = new GenericList<类型> ();
+            List<类型> 集合名称 = new List<类型> ();
         赋值
-            genericList.Add(); //匹配对应的数据类型
+            list.Add(); //匹配对应的数据类型
         取值
-            genericList[下标]; //无需类型转换
+            list[下标]; //无需类型转换
         删除
-            genericList.RemoveAt(下标)
-            genericList.Remove(对象)
-            genericList.clear()
+            list.RemoveAt(下标)
+            list.Remove(对象)
+            list.clear()
         包含
-            genericList.contains(对象)
+            list.contains(对象)
         遍历
-            foreach(类型 item in genericList)
+            foreach(类型 item in list)
             {
                 item//直接使用
             }
@@ -210,12 +210,12 @@ HashTable: 动态可变 装箱拆箱 键值对两排结构
 类似于数组              key-value
 
 ArrayList               HashTable        装箱拆箱
-GenericList             Dictionary       限制了数据类型
+List             Dictionary       限制了数据类型
 
 集合和窗体:
     泛型集合可以作为控件的数据直接绑定在控件上
     注意:绑定数据的类中必须写成属性不能用字段
-    GenericList<T>
+    List<T>
         dataGridview.Datasource=new Bindinglist<类型>(list集合);
     Dictionary<k,v>
         dataGridview.DataSource=new BindingList<类型>(dic.Values.ToList());
@@ -223,4 +223,3 @@ GenericList             Dictionary       限制了数据类型
         BindingSource bs = new BindingSource();
         bs.Datasource = dic.Values
         dataGridview.DataSource = bs;
-
