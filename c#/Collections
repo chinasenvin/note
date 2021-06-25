@@ -41,28 +41,28 @@ public class SE {
         声明 新增 删除 取 查找 遍历
     
         声明:
-            ArrayList list=new ArrayList();
+            ArrayList arrayList=new ArrayList();
         新增:
-            list.add(objectobj);//自动装箱操作-->object
+            arrayList.add(objectobj);//自动装箱操作-->object
         取数据:
-            list[下标] //强制转换 拆箱-->对应的类型
+            arrayList[下标] //强制转换 拆箱-->对应的类型
         删除:   
-            list.RemoveAt(下标); //根据下标删除
-            list.Remove(对象);   //根据对象删除
+            arrayList.RemoveAt(下标); //根据下标删除
+            arrayList.Remove(对象);   //根据对象删除
             注意: 删除后下标重新由0开始排序
-            list.clear();        //清除所有的
+            arrayList.clear();        //清除所有的
         查找
-            list.contains(对象); //返回是否包含某个指定的对象
+            arrayList.contains(对象); //返回是否包含某个指定的对象
         遍历:
-            for (inti = 0; i < list.Count; i++)
+            for (inti = 0; i < arrayList.Count; i++)
             {
-                if (list[i] is SE)
-                Console.WriteLine(((SE)list[i]).Show();
-                if (list[i] is PM)
-                Console.WriteLine(((PM)list[i]).Show(O);
+                if (arrayList[i] is SE)
+                Console.WriteLine(((SE)arrayList[i]).Show();
+                if (arrayList[i] is PM)
+                Console.WriteLine(((PM)arrayList[i]).Show(O);
             }
 
-            foreach (var item in list)
+            foreach (var item in arrayList)
             {
                 if(item is SE)
                     Console.WriteLine(((SE)item).Show());
@@ -70,7 +70,7 @@ public class SE {
                     Console.WriteLine((PM)item).Show());
             }
 
-            foreach (var item in list)
+            foreach (var item in arrayList)
             {
                 if(item is SE)
                     Console.WriteLine( (item as SE).Show();
@@ -136,24 +136,24 @@ HashTable: 动态可变 装箱拆箱 键值对两排结构
 
 限制数据类型 泛型集合
 
-3.  List<T>
+3.  GenericList<T>
     泛型:T type类型 定义List类没有指明T类型 在声明的时候确定T类型
     特点:限制了数据类型的ArrayList
     操作:
         声明
-            List<类型> 集合名称 = newList<类型> ();
+            GenericList<类型> 集合名称 = new GenericList<类型> ();
         赋值
-            list.Add(); //匹配对应的数据类型
+            genericList.Add(); //匹配对应的数据类型
         取值
-            list[下标]; //无需类型转换
+            genericList[下标]; //无需类型转换
         删除
-            list.RemoveAt(下标)
-            list.Remove(对象)
-            list.clear()
+            genericList.RemoveAt(下标)
+            genericList.Remove(对象)
+            genericList.clear()
         包含
-            list.contains(对象)
+            genericList.contains(对象)
         遍历
-            foreach(类型 item in list)
+            foreach(类型 item in genericList)
             {
                 item//直接使用
             }
@@ -210,12 +210,12 @@ HashTable: 动态可变 装箱拆箱 键值对两排结构
 类似于数组         key-value
 
 ArrayList           HashTable        装箱拆箱
-List                Dictionary       限制了数据类型
+GenericList                Dictionary       限制了数据类型
 
 集合和窗体:
     泛型集合可以作为控件的数据直接绑定在控件上
     注意:绑定数据的类中必须写成属性不能用字段
-    List<T>
+    GenericList<T>
         dataGridview.Datasource=new Bindinglist<类型>(list集合);
     Dictionary<k,v>
         dataGridview.DataSource=new BindingList<类型>(dir.Values.ToList());
@@ -223,5 +223,4 @@ List                Dictionary       限制了数据类型
         BindingSource bs = new BindingSource();
         bs.Datasource s dir.Values
         dataGridview.DataSource = bs;
-
 
