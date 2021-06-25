@@ -6,6 +6,33 @@
 
 四个集合都是类，封装了一些操作，使用起来更方便
 
+public class SE {
+    public string Id { get; set; }
+    publi string Name { get; set; }
+    public int Age { get; set; }
+    public Gender Sex { get; set;}
+    public string Assess { get; set; }
+    public int Score { get; set; }
+    public int Popular { get; set; }
+    
+    public string Show(){
+        return "大家好我的名字叫:”+this.Name+"工号”+this.Id+"我的人气值高达:”+this.Popular;
+    } 
+}
+
+public class SE {
+    public string Id { get; set; }
+    publi string Name { get; set; }
+    public int Age { get; set; }
+    public Gender Sex { get; set;}
+    public string WorkExper { get; set; }
+    public int WorkYear { get; set; }
+    
+    public string Show(){
+        return "大家好我的名字叫:”+this.Name+"工号”+this.Id+"我的工作年限:”+this.WorkYear;
+    } 
+}
+
 1.  动态集合(ArrayList)
     特点:
         长度可以自动进行变化,长度随着存取数据自动调整
@@ -30,25 +57,25 @@
                 for (inti = 0; i < list.Count; i++)
                 {
                     if (list[i] is SE)
-                    Console. WriteLine(((SE)list[i]).Show();
+                    Console.WriteLine(((SE)list[i]).Show();
                     if (list[i] is PM)
-                    Console. WriteLine(((PM)list[i]).Show(O);
+                    Console.WriteLine(((PM)list[i]).Show(O);
                     }
 
                 foreach (var item in list)
                 {
                     if(item is SE)
-                        Console. WriteLine(((SE)item).Show());
+                        Console.WriteLine(((SE)item).Show());
                     if (item is PM)
-                        Console. WriteLine((PM)item).Show());
+                        Console.WriteLine((PM)item).Show());
                     }
 
                 foreach (var item in list)
                 {
                     if(item is SE)
-                        Console. WriteLine( (item as SE).Show();
+                        Console.WriteLine( (item as SE).Show();
                     if (item is PM)
-                        Console. WriteLine(((PM)item).Show();
+                        Console.WriteLine(((PM)item).Show();
                 }
             
             is语法:
@@ -79,27 +106,102 @@
         遍历
             只遍历键
                 foreach (var item in hash.Keys){}
-                foreach (var item in hash. Keys)
+                foreach (var item in hash.Keys)
 				{
-                    Console. Writeline(item);
+                    Console.Writeline(item);
 				}
             只遍历值
                 foreach (var item in hash.Values){}
-                foreach (var item in hash. Values)
+                foreach (var item in hash.Values)
 				{
                     if (item is PM)
-                        Console. WriteLine ((item as PM).Show();
+                        Console.WriteLine ((item as PM).Show();
                     if (item is SE)
-                        Console. WriteLine((item as SE).Show(O);
+                        Console.WriteLine((item as SE).Show(O);
                 }
             遍历值+键
                 foreach (DictionaryEntry item in hash)
                 {
                     item.Key 键
-                    item. Value值
+                    item.Value值
                 }
                 foreach (DictionaryEntry item in hash)
                 {
-                    Console. Writeline(item.Key);
-                    Console. Writeline( (item. Value_as _SE).Show());
+                    Console.Writeline(item.Key);
+                    Console.Writeline( (item.Value_as _SE).Show());
                 }
+				
+ArrayList: 动态数组 装箱拆箱类似数组单排结构
+HashTable: 动态可变装箱拆箱键值对两排结构
+
+限制数据类型 泛型集合
+
+3.  List<T>
+    泛型:Ttype类型定义List类没有指明r类型在声明的时候确定T类型
+    特点:限制了数据类型的ArrayList
+    操作:
+        声明
+            List<类型> 集合名称 = newList<类型> ();
+        赋值
+            list.Add(); //匹配对应的数据类型
+        取值
+            list[下标]; //无需类型转换
+        删除
+            list.RemoveAt(下标)
+            list.Remove(对象)
+            list.clear()
+        包含
+            list.contains(对象)
+        遍历
+            foreach(类型 item in list)
+            {
+                item//直接使用
+            }
+            foreach (SE item in seList)
+            {
+                Console.Writeline(item.Show());
+            }
+
+4.  字典集合(Dictionary)
+    特点:
+        限制了数据类型的HashTable
+        key-value键值对类型相同 两排结构 操作通过key完成
+        限制了装的数据类型
+    操作:
+        声明:
+            Dictionary<K类型,V类型> dic = new Dictionary<K类型,V类型>();
+        赋值:
+            dic.Add(k,v); //不会装箱类型限制
+        取数据:
+            dic[key]; //通过key来取 不需要类型转换
+        删除:
+            dic.Remove (key)
+            dic .clear()
+        判断
+            ContainsKey    //键查找
+            ContainsValue  //值查找
+        遍历
+            只遍历键:
+                foreach(类型item in dic.Keys){}
+                foreach (int item in dic.Keys)
+                {
+                    Console Writeline(item);
+                }
+            只遍历值:
+                foreach(类型item in dic.Values){}
+                foreach (SE item in dic.Values)
+                {
+                    Console.WriteLine(item.Show());
+                }
+                
+            一个键一个值:
+                foreach (KeyValuePair<类型,类型>item in dic)
+                {
+                    item.Key
+                    item.Value
+				}
+                foreach (KeyValuePair item in dic)
+                {
+                    Console.WritelLine(item.Key);
+                    Console.Writeline(item.Value.Shoy());
+                }    
