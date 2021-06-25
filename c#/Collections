@@ -210,7 +210,7 @@ HashTable: 动态可变 装箱拆箱 键值对两排结构
 类似于数组         key-value
 
 ArrayList           HashTable        装箱拆箱
-GenericList                Dictionary       限制了数据类型
+GenericList         Dictionary       限制了数据类型
 
 集合和窗体:
     泛型集合可以作为控件的数据直接绑定在控件上
