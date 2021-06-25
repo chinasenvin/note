@@ -218,9 +218,9 @@ GenericList                Dictionary       限制了数据类型
     GenericList<T>
         dataGridview.Datasource=new Bindinglist<类型>(list集合);
     Dictionary<k,v>
-        dataGridview.DataSource=new BindingList<类型>(dir.Values.ToList());
+        dataGridview.DataSource=new BindingList<类型>(dic.Values.ToList());
         
         BindingSource bs = new BindingSource();
-        bs.Datasource s dir.Values
+        bs.Datasource = dic.Values
         dataGridview.DataSource = bs;
 
