@@ -205,3 +205,21 @@ HashTable: 动态可变 装箱拆箱 键值对两排结构
                     Console.WritelLine(item.Key);
                     Console.Writeline(item.Value.Shoy());
                 }    
+                             
+单排结构           双排结构
+类似于数组         key-value
+
+ArrayList           HashTable        装箱拆箱
+List                Dictionary       限制了数据类型
+
+集合和窗体:
+    泛型集合可以作为控件的数据直接绑定在控件上
+    注意:绑定数据的类中必须写成属性不能用字段
+    List<T>
+        dataGridview.Datasource=new Bindinglist<类型>(list集合);
+    Dictionary<k,v>
+        dataGridview.DataSource=new BindingList<类型>(dir.Values.ToList());
+        
+        BindingSource bs = new BindingSource();
+        bs.Datasource s dir.Values
+        dataGridview.DataSource = bs; 
