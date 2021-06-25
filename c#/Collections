@@ -41,10 +41,10 @@ public class SE {
 	    声明 新增 删除 取 查找 遍历
 	
 	    声明:
-		    ArrayList list=new ArrayList();
-		新增:
-		    list.add(objectobj);//自动装箱操作-->object
-		取数据:
+            ArrayList list=new ArrayList();
+        新增:
+            list.add(objectobj);//自动装箱操作-->object
+        取数据:
             list[下标] //强制转换 拆箱-->对应的类型
         删除:   
         list.RemoveAt(下标); //根据下标删除
@@ -225,7 +225,4 @@ List                Dictionary       限制了数据类型
         dataGridview.DataSource = bs;
 
 
-				
-                
-                
-                
+ 
