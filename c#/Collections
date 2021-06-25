@@ -38,9 +38,9 @@ public class SE {
         长度可以自动进行变化,长度随着存取数据自动调整
         动态存放的是任意类型的数据
     操作: 
-	    声明 新增 删除 取 查找 遍历
-	
-	    声明:
+        声明 新增 删除 取 查找 遍历
+    
+        声明:
             ArrayList list=new ArrayList();
         新增:
             list.add(objectobj);//自动装箱操作-->object
@@ -84,7 +84,7 @@ public class SE {
                 A as B 把A强转成B 等价于 (B)A
                 A as B 转换失败 返回null
                 (B)A   转换失败 抛一个异常
-				
+                
 2.  哈希表(HashTable)
     特点:
         两排结构 键值对结构构成一个key(键) 对应一个value(值)
@@ -102,18 +102,18 @@ public class SE {
             hash.Clear();
         查找
             hash.ContainsKey(键查找)
-            hash.containsvalue(值查找)	
+            hash.containsvalue(值查找)    
         遍历
             只遍历键
                 foreach (var item in hash.Keys){}
                 foreach (var item in hash.Keys)
-				{
+                {
                     Console.Writeline(item);
-				}
+                }
             只遍历值
                 foreach (var item in hash.Values){}
                 foreach (var item in hash.Values)
-				{
+                {
                     if (item is PM)
                         Console.WriteLine ((item as PM).Show();
                     if (item is SE)
@@ -130,7 +130,7 @@ public class SE {
                     Console.Writeline(item.Key);
                     Console.Writeline( (item.Value_as _SE).Show());
                 }
-				
+                
 ArrayList: 动态数组 装箱拆箱 类似数组单排结构
 HashTable: 动态可变 装箱拆箱 键值对两排结构
 
@@ -199,7 +199,7 @@ HashTable: 动态可变 装箱拆箱 键值对两排结构
                 {
                     item.Key
                     item.Value
-				}
+                }
                 foreach (KeyValuePair item in dic)
                 {
                     Console.WritelLine(item.Key);
@@ -223,4 +223,5 @@ List                Dictionary       限制了数据类型
         BindingSource bs = new BindingSource();
         bs.Datasource s dir.Values
         dataGridview.DataSource = bs;
+
 
