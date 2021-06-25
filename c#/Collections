@@ -60,7 +60,7 @@ public class SE {
                 Console.WriteLine(((SE)list[i]).Show();
                 if (list[i] is PM)
                 Console.WriteLine(((PM)list[i]).Show(O);
-                }
+            }
 
             foreach (var item in list)
             {
@@ -68,7 +68,7 @@ public class SE {
                     Console.WriteLine(((SE)item).Show());
                 if (item is PM)
                     Console.WriteLine((PM)item).Show());
-                }
+            }
 
             foreach (var item in list)
             {
@@ -223,3 +223,4 @@ List                Dictionary       限制了数据类型
         BindingSource bs = new BindingSource();
         bs.Datasource s dir.Values
         dataGridview.DataSource = bs;
+
